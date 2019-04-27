@@ -1,7 +1,6 @@
-# AndroidUtil
-封装了一些Android常用的代码块  
-会持续整理更新  
-[![](https://jitpack.io/v/LongAgoLong/AndroidUtil.svg)](https://jitpack.io/#LongAgoLong/AndroidUtil)  
+# BaseMvp
+封装了MVP的基类，最简单那实现MVP的方式    
+[![](https://jitpack.io/v/LongAgoLong/BaseMvp.svg)](https://jitpack.io/#LongAgoLong/BaseMvp)  
 **gradle依赖**
 ```java
 allprojects {
@@ -12,7 +11,7 @@ allprojects {
 }
 ```
 ```java
-implementation 'com.github.LongAgoLong:AndroidUtil:$JitPack-Version$'
+implementation 'com.github.LongAgoLong:BaseMvp:$JitPack-Version$'
 implementation 'io.reactivex.rxjava2:rxjava:2.1.17'
 implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
 implementation 'com.trello.rxlifecycle2:rxlifecycle:2.2.2'
@@ -30,7 +29,7 @@ implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2'
 ```java
 <dependency>
 	<groupId>com.github.LongAgoLong</groupId>
-	<artifactId>AndroidUtil</artifactId>
+	<artifactId>BaseMvp</artifactId>
 	<version>$JitPack-Version$</version>
 </dependency>
 ```

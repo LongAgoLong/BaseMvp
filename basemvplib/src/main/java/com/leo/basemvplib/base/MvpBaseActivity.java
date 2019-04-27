@@ -2,12 +2,12 @@ package com.leo.basemvplib.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
 import com.leo.basemvplib.presenter.IPresenter;
 import com.leo.basemvplib.view.IView;
+import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
-public abstract class MvpBaseActivity<P extends IPresenter<V>, V extends IView> extends AppCompatActivity {
+public abstract class MvpBaseActivity<P extends IPresenter<V>, V extends IView> extends RxAppCompatActivity {
     private P presenter;
 
     protected MvpBaseActivity() {

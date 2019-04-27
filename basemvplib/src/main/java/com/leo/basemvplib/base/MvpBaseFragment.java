@@ -3,15 +3,15 @@ package com.leo.basemvplib.base;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.leo.basemvplib.presenter.IPresenter;
 import com.leo.basemvplib.view.IView;
+import com.trello.rxlifecycle2.components.support.RxFragment;
 
-public abstract class MvpBaseFragment<P extends IPresenter<V>, V extends IView> extends Fragment {
+public abstract class MvpBaseFragment<P extends IPresenter<V>, V extends IView> extends RxFragment {
     private P presenter;
 
     public MvpBaseFragment() {

@@ -1,7 +1,9 @@
 package com.leo.basemvplib.presenter;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 
+import com.leo.basemvplib.callback.OnRxBindRecycle;
 import com.leo.basemvplib.view.IView;
 
 import java.lang.ref.WeakReference;
@@ -9,11 +11,13 @@ import java.lang.ref.WeakReference;
 public abstract class IPresenter<V extends IView> {
 
     private WeakReference<V> mUi;
+    private OnRxBindRecycle onRxBindRecycle;
 
-    public IPresenter() {
+    public IPresenter(@NonNull OnRxBindRecycle onRxBindRecycle) {
+        this.onRxBindRecycle = onRxBindRecycle;
     }
 
-    public abstract void onCommandCallback(String cmd, String extra);
+    public abstract void onCommandExecute(String cmd, String extra);
 
     /**
      * @param ui The Ui implementation that is now ready to be used.
